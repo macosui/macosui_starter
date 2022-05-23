@@ -1,10 +1,10 @@
 name: macosui_starter
 description: A starter Flutter application for macOS that uses macos_ui
-repository: https://github.com/GroovinChip/macos_ui/tree/dev/starter_app/bricks
+repository: https://github.com/GroovinChip/macosui_starter
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 1.2.1
+version: 1.2.1+1
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.

@@ -1,3 +1,6 @@
+# 1.2.1+1
+* Minor fixes
+
 # 1.2.1
 * Ensures that generated applications will always end up in a subdirectory of the specified output directory, or if 
 none is spoecified, a subfolder of the current directory.
