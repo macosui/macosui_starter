@@ -1,3 +1,6 @@
+# 1.2.1+2
+* Use `macos_ui: ^1.5.1`
+
 # 1.2.1+1
 * Minor fixes
 
