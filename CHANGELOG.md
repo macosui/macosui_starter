@@ -1,3 +1,9 @@
+# 1.3.0
+* Fixed a bug where the `post_gen` hook would crash
+* Added a success message upon successful completion of project generation
+* Use `macos_ui: ^1.7.5`
+* Use `desktop_multi_window: ^0.2.0`
+
 # 1.2.1+2
 * Use `macos_ui: ^1.5.1`
 
@@ -6,7 +12,7 @@
 
 # 1.2.1
 * Ensures that generated applications will always end up in a subdirectory of the specified output directory, or if 
-none is spoecified, a subfolder of the current directory.
+none is specified, a subfolder of the current directory.
   * Ensures that `flutter pub get` will always be run in the directory of the generated application.
 
 # 1.2.0

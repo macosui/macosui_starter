@@ -12,7 +12,7 @@ void run(HookContext context) async {
     runInShell: true,
     workingDirectory: '${Directory.current.path}/${context.vars['app_name']}',
   );
-  pubGet();
+  pubGet;
   if (pubGetResult.exitCode != 0) {
     context.logger.err('flutter pub get failed');
     exit(pubGetResult.exitCode);
@@ -27,11 +27,12 @@ void run(HookContext context) async {
     ],
     runInShell: true,
   );
-  flutterFormat();
+  flutterFormat;
   if (flutterFormatResult.exitCode != 0) {
     context.logger.err('flutter format failed');
     exit(flutterFormatResult.exitCode);
   }
-
+  context.logger
+      .success('\nSuccessfully generated ${context.vars['app_name']}!');
   exit(flutterFormatResult.exitCode);
 }
