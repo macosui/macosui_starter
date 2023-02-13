@@ -1,3 +1,7 @@
+# 1.4.0
+* Use `macos_ui: ^1.10.0`
+* Ensures window transparency compatible with Flutter versions >= 3.7.0
+
 # 1.3.0
 * Fixed a bug where the `post_gen` hook would crash
 * Added a success message upon successful completion of project generation
