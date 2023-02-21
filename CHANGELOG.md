@@ -1,3 +1,6 @@
+# 1.4.1
+* Use `macos_ui: ^1.11.1`
+
 # 1.4.0
 * Use `macos_ui: ^1.10.0`
 * Ensures window transparency compatible with Flutter versions >= 3.7.0

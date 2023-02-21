@@ -13,7 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.5{{#add_multi_window}}
   collection: ^1.16.0
   desktop_multi_window: ^0.2.0{{/add_multi_window}}
-  macos_ui: ^1.10.0
+  macos_ui: ^1.11.1
 
 dev_dependencies:
   flutter_test:
