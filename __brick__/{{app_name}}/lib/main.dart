@@ -191,7 +191,7 @@ class _MainViewState extends State<MainView> {
           ],
         ),
       ],
-      body: MacosWindow(
+      child: MacosWindow(
         sidebar: Sidebar(
           minWidth: 200,
           builder: (context, scrollController) => SidebarItems(

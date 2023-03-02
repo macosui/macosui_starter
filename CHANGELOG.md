@@ -1,3 +1,6 @@
+# 1.4.2
+* Update usage of `PlatformMenuBar` to use `child` instead of the deprecated `body`
+
 # 1.4.1
 * Use `macos_ui: ^1.11.1`
 
