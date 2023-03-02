@@ -19,10 +19,10 @@ You'll be prompted for the following information:
 * The name of your app
 * Your app's description
 * The name of your organization
-* Whether to use window transclucency
+* Whether to use window translucency
 * Whether to show or hide the native titlebar
 
-⚠️ **Please note**: if you opt to use window transclucency you will not be asked if you want to show or hide the native 
+⚠️ **Please note**: if you opt to use window translucency you will not be asked if you want to show or hide the native 
 titlebar, as it will be hidden by default.
 
 ## Variables ✨
@@ -32,7 +32,7 @@ titlebar, as it will be hidden by default.
 | `app_name`               | The name of your app                          | `macosui_starter`                                       | `string`  |
 | `app_description`        | The description of your application           | `A starter Flutter application for macOS with macos_ui` | `string`  |
 | `org_name`               | The name of your organization                 | `com.example`                                           | `string`  |
-| `use_translucency`       | Whether to use window transclucency           | `false`                                                 | `boolean` |
+| `use_translucency`       | Whether to use window translucency            | `false`                                                 | `boolean` |
 | `debug_label_on`         | Whether to show the debug label by default    | `false`                                                 | `boolean` |
 | `custom_system_menu_bar` | Whether to add a basic custom system menu bar | `false`                                                 | `boolean` |
 | `add_multi_window`       | Whether to add basic multi-window support     | `false`                                                 | `boolean` |

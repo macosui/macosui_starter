@@ -1,3 +1,7 @@
+# 1.5.0
+* Use `macos_ui: ^1.12.1+1`
+* Target Dart SDK Version `2.19.0`
+
 # 1.4.2
 * Update usage of `PlatformMenuBar` to use `child` instead of the deprecated `body`
 
