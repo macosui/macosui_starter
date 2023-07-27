@@ -1,10 +1,7 @@
 name: macosui_starter
 description: A starter Flutter application for macOS that uses macos_ui
 repository: https://github.com/GroovinChip/macosui_starter
-# The following defines the version and build number for your brick.
-# A version number is three numbers separated by dots, like 1.2.34
-# followed by an optional build number (separated by a +).
-version: 1.5.0
+version: 2.0.0
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
@@ -34,11 +31,17 @@ vars:
     description: The name of your organization
     default: com.example
     prompt: Organization name?
-  use_translucency:
-    type: boolean
-    description: Whether to make the application window translucent
-    default: false
-    prompt: Use window translucency?
+#  toolbar_style:
+#    type: enum
+#    description: The style of the application window's toolbar
+#    default: unified
+#    prompt: Toolbar style?
+#    values:
+#      - automatic
+#      - expanded
+#      - preference
+#      - unified
+#      - unifiedCompact
   debug_label_on:
     type: boolean
     description: Whether to show the debug label by default
@@ -49,8 +52,13 @@ vars:
     description: Whether to add a basic custom system menu bar
     default: false
     prompt: Use custom system menu bar?
-  add_multi_window:
+#  add_multi_window:
+#    type: boolean
+#    description: Whether to add basic multi-window support
+#    default: false
+#    prompt: Add multi-window support?
+  initialize_git_repo:
     type: boolean
-    description: Whether to add basic multi-window support
+    description: Whether to auto-initialize a git repository
     default: false
-    prompt: Add multi-window support?
+    prompt: Initialize git?

@@ -4,7 +4,7 @@
 
 A starter Flutter application for macOS that uses [`macos_ui`](https://pub.dev/packages/macos_ui).
 
-<img src='https://imgur.com/rG4uDKs.png' />
+<img src='https://imgur.com/O6XsnEB.png' />
 
 ## 🚧 Prerequisites
 * Your Flutter version should be at least 3.0
@@ -19,11 +19,10 @@ You'll be prompted for the following information:
 * The name of your app
 * Your app's description
 * The name of your organization
-* Whether to use window translucency
-* Whether to show or hide the native titlebar
-
-⚠️ **Please note**: if you opt to use window translucency you will not be asked if you want to show or hide the native 
-titlebar, as it will be hidden by default.
+* Whether to show the debug label by default
+* Whether to add a basic custom system menu bar
+* Whether to initialize a git repository
+* Whether to add basic multi-window support **_(temporarily disabled)_**
 
 ## Variables ✨
 
@@ -32,15 +31,24 @@ titlebar, as it will be hidden by default.
 | `app_name`               | The name of your app                          | `macosui_starter`                                       | `string`  |
 | `app_description`        | The description of your application           | `A starter Flutter application for macOS with macos_ui` | `string`  |
 | `org_name`               | The name of your organization                 | `com.example`                                           | `string`  |
-| `use_translucency`       | Whether to use window translucency            | `false`                                                 | `boolean` |
 | `debug_label_on`         | Whether to show the debug label by default    | `false`                                                 | `boolean` |
 | `custom_system_menu_bar` | Whether to add a basic custom system menu bar | `false`                                                 | `boolean` |
+| `initialize_git_repo`    | Whether to initialize a git repository        | `false`                                                 | `boolean` |
 | `add_multi_window`       | Whether to add basic multi-window support     | `false`                                                 | `boolean` |
 
 Setting `custom_system_menu_bar` to `true` will add a basic custom system menu bar to your application, which looks 
 like this:
 
 <img src='https://imgur.com/yV7RR2E.png' />
+
+### 🚨 A Note About multi-window Support
+The `add_multi_window` option worked by using a third-party plugin called `desktop_multi_window`, which creates new 
+windows by creating a new instance of the Flutter engine for each window. Unfortunately, this approach means that any 
+plugins used by the primary instance are not passed to the new instances. There are workarounds for multiwindow 
+applications using plugins that would require data passed between them; As of version 2.0, `macos_ui` uses the 
+`macos_window_utils` plugin under the hood, the nature of which won't work with the workarounds.   
+
+Therefore, `add_multi_window` is disabled until multi-window is officially released in the Flutter framework itself. 
 
 ## Output 📦
 

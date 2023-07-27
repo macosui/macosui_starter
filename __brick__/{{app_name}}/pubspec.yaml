@@ -1,10 +1,10 @@
-name: {{ app_name }}
+name: {{ app_name.snakeCase() }}
 description: {{ app_description }}
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: ">=2.19.2 <4.0.0"
 
 dependencies:
   flutter:
@@ -13,7 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.5{{#add_multi_window}}
   collection: ^1.16.0
   desktop_multi_window: ^0.2.0{{/add_multi_window}}
-  macos_ui: ^1.12.1+1
+  macos_ui: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -24,7 +24,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.1
+  flutter_lints: ^2.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

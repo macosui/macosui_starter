@@ -7,25 +7,34 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:macos_ui/macos_ui.dart';
 
+/// This method initializes macos_window_utils and styles the window.
+Future<void> _configureMacosWindowUtils() async {
+  const config = MacosWindowUtilsConfig();
+  await config.apply();
+}
+
 {{#add_multi_window}}
-void main(List<String> args) {
+Future<void> main(List<String> args) async {
   if (args.firstOrNull == 'multi_window') {
     final windowId = int.parse(args[1]);
     final arguments = args[2].isEmpty
         ? const {}
         : jsonDecode(args[2]) as Map<String, dynamic>;
+    await _configureMacosWindowUtils();
     runApp(
       AboutWindow(
         windowController: WindowController.fromWindowId(windowId),
         args: arguments,
       ));
   } else {
+    await _configureMacosWindowUtils();
     runApp(const App());
   }
 }
 {{/add_multi_window}}
 {{^add_multi_window}}
-void main() {
+Future<void> main() async {
+  await _configureMacosWindowUtils();
   runApp(const App());
 }
 {{/add_multi_window}}
@@ -254,18 +263,28 @@ class HomePage extends StatelessWidget {
       builder: (context) {
         return MacosScaffold(
           toolBar: ToolBar(
+          leading: MacosTooltip(
+            message: 'Toggle Sidebar',
+            useMousePosition: false,
+            child: MacosIconButton(
+              icon: MacosIcon(
+                CupertinoIcons.sidebar_left,
+                color: MacosTheme.brightnessOf(context).resolve(
+                  const Color.fromRGBO(0, 0, 0, 0.5),
+                  const Color.fromRGBO(255, 255, 255, 0.5),
+                ),
+                size: 20.0,
+              ),
+              boxConstraints: const BoxConstraints(
+                minHeight: 20,
+                minWidth: 20,
+                maxWidth: 48,
+                maxHeight: 38,
+              ),
+              onPressed: () => MacosWindowScope.of(context).toggleSidebar(),
+              ),
+            ),
             title: const Text('Home'),
-            actions: [
-              ToolBarIconButton(
-                label: 'Toggle Sidebar',
-                icon: const MacosIcon(CupertinoIcons.sidebar_left),
-                showLabel: false,
-                tooltipMessage: 'Toggle Sidebar',
-                onPressed: () {
-                  MacosWindowScope.of(context).toggleSidebar();
-                },
-              )
-            ],
           ),
           children: [
             ContentArea(

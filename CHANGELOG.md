@@ -1,3 +1,13 @@
+# 2.0.0
+* Use `macos_ui: ^2.0.0`
+* Target Dart SDK `">=2.19.2 <4.0.0"`
+* Added option to initialize git
+* Ensure proper casing of `app_name` in `README.md` and `AppInfo.xcconfig`
+* Use the newer app icon from the Flutter framework
+* Removed `use_translucency` option
+* Removed `hide_native_title_bar` option
+* Removed `add_multi_window` option
+
 # 1.5.0
 * Use `macos_ui: ^1.12.1+1`
 * Target Dart SDK Version `2.19.0`
